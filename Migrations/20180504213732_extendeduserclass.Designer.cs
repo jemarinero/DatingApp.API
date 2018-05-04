@@ -11,9 +11,10 @@ using System;
 namespace DatingApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20180504213732_extendeduserclass")]
+    partial class extendeduserclass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,8 +51,6 @@ namespace DatingApp.API.Migrations
                     b.Property<string>("City");
 
                     b.Property<string>("Country");
-
-                    b.Property<DateTime>("DateCreated");
 
                     b.Property<DateTime>("DateOfBirth");
 
